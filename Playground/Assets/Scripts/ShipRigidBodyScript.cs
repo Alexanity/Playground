@@ -25,7 +25,7 @@ public class ShipRigidBodyScript : MonoBehaviour
     private float upDownGlideReduction = 0.111f;        // How fast we slow down
     [SerializeField, Range(0.001f, 0.999f)]
     private float leftRightGlideReduction = 0.111f;
-    float glide = 0f;
+    float glide, verticalGlide, horizontalGlide = 0f;
 
     Rigidbody rb;
 
@@ -52,6 +52,7 @@ public class ShipRigidBodyScript : MonoBehaviour
         rb.AddRelativeTorque(Vector3.right * Mathf.Clamp(-pitchYaw.y, -1f, 1f) * pitchTorque * Time.deltaTime);
         rb.AddRelativeTorque(Vector3.up * Mathf.Clamp(pitchYaw.x, -1f, 1f) * yawTorque * Time.deltaTime);
 
+        // THRUST
         if(thrust1D > 0.1f || thrust1D < -0.1f)
         {
             float currentThrust = thrust;
@@ -63,6 +64,28 @@ public class ShipRigidBodyScript : MonoBehaviour
         {
             rb.AddRelativeForce(Vector3.forward * glide * Time.deltaTime);
             glide *= thrustGlideReduction;
+        }
+        // UP/DOWN
+        if (upDown1D > 0.1f || upDown1D < -0.1f)
+        {
+            rb.AddRelativeForce(Vector3.up * upDown1D * upThrust * Time.deltaTime);
+            verticalGlide = upDown1D * upThrust;
+        }
+        else
+        {
+            rb.AddRelativeForce(Vector3.up * verticalGlide * Time.deltaTime);
+            verticalGlide *= upDownGlideReduction;
+        }
+        //STARFING
+        if (strafe1D > 0.1f || strafe1D < -0.1f)
+        {
+            rb.AddRelativeForce(Vector3.right * strafe1D * upThrust * Time.deltaTime);
+            horizontalGlide = strafe1D * strafeThrust;
+        }
+        else
+        {
+            rb.AddRelativeForce(Vector3.right * horizontalGlide * Time.deltaTime);
+            horizontalGlide *= leftRightGlideReduction;
         }
     }
 

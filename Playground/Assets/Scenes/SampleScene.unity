@@ -283,14 +283,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f38af184ef29be44b57667d477e0e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yawTorque: 250
-  pitchTorque: 500
+  yawTorque: 100
+  pitchTorque: 200
   rollTorque: 500
   thrust: 100
   upThrust: 50
   strafeThrust: 50
   thrustGlideReduction: 0.5
-  upDownGlideReduction: 0.999
+  upDownGlideReduction: 0.111
   leftRightGlideReduction: 0.111
 --- !u!54 &539098895
 Rigidbody:
