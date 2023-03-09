@@ -35,6 +35,7 @@ public class ShipRigidBodyScript : MonoBehaviour
     private float upDown1D;
     private float roll1D;
     private Vector2 pitchYaw;
+    private bool isbrake;
 
     void Start()
     {
