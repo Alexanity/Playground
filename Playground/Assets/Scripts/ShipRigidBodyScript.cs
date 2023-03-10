@@ -19,6 +19,19 @@ public class ShipRigidBodyScript : MonoBehaviour
     private float upThrust = 50f; // how fast we go up and down
     [SerializeField]
     private float strafeThrust = 50f; // how fast we go left and right
+
+    [Header("=== Boost Settings ===")]
+    [SerializeField]
+    private float maxBoostAmount = 2f;
+    [SerializeField]
+    private float boostDeprecationRate = 0.25f;
+    [SerializeField]
+    private float boostReachargeRate = 0.5f;
+    [SerializeField]
+    private float boostMultipier = 5f;
+    public bool boosting = false;
+    public float currentBoostAmount;
+
     [SerializeField, Range(0.001f, 0.999f)]
     private float thrustGlideReduction = 0.999f;   
     [SerializeField, Range(0.001f, 0.999f)]
@@ -40,13 +53,31 @@ public class ShipRigidBodyScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        currentBoostAmount = maxBoostAmount; // player starts with boost 
     }
 
     void FixedUpdate() // because we use physics and we want it to be independent from the frame rate
     {
-        HandleMovement();   
+        HandleMovement();
+        HandleBoosting();
     }
-
+    void HandleBoosting()
+    {
+        if (boosting && currentBoostAmount > 0f){ // if we have any boost left
+            currentBoostAmount -= boostDeprecationRate; // decrease boosting
+            if(currentBoostAmount <= 0f)
+            {
+                boosting = false; // if the tank (with the boost) hits zero we set it to false
+            }
+        }
+        else
+        {
+            if(currentBoostAmount < maxBoostAmount)
+            {
+                currentBoostAmount += boostReachargeRate; // replenishing the boost in the tank
+            }
+        }
+    }
     void HandleMovement()
     {
         rb.AddRelativeTorque(Vector3.back * roll1D * rollTorque * Time.deltaTime);
@@ -57,6 +88,15 @@ public class ShipRigidBodyScript : MonoBehaviour
         if(thrust1D > 0.1f || thrust1D < -0.1f)
         {
             float currentThrust = thrust;
+
+            if (boosting)
+            {
+                currentThrust = thrust * boostMultipier;
+            }
+            else
+            {
+                currentThrust = thrust;
+            }
 
             rb.AddRelativeForce(Vector3.forward * thrust1D * currentThrust * Time.deltaTime);
             glide = thrust; 
@@ -110,6 +150,10 @@ public class ShipRigidBodyScript : MonoBehaviour
     public void OnPitchYaw(InputAction.CallbackContext context)
     {
         pitchYaw = context.ReadValue<Vector2>();
+    }
+    public void OnBoost(InputAction.CallbackContext context)
+    {
+        boosting = context.performed;
     }
     #endregion
 }
