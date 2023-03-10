@@ -87,7 +87,7 @@ public class ShipRigidBodyScript : MonoBehaviour
         // THRUST
         if(thrust1D > 0.1f || thrust1D < -0.1f)
         {
-            float currentThrust = thrust;
+            float currentThrust;
 
             if (boosting)
             {

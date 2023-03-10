@@ -353,12 +353,12 @@ MonoBehaviour:
   upThrust: 50
   strafeThrust: 50
   maxBoostAmount: 20
-  boostDeprecationRate: 0.25
-  boostReachargeRate: 0.5
+  boostDeprecationRate: 0.1
+  boostReachargeRate: 0.15
   boostMultipier: 10
   boosting: 0
   currentBoostAmount: 0
-  thrustGlideReduction: 0.5
+  thrustGlideReduction: 0.3
   upDownGlideReduction: 0.111
   leftRightGlideReduction: 0.111
 --- !u!54 &539098895
