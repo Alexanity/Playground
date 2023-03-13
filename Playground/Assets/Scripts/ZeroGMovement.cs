@@ -7,10 +7,10 @@ using UnityEngine.InputSystem;
 public class ZeroGMovement : MonoBehaviour
 {
     [Header("=== Player Movement Settings ===")]
-    [SerializeField]
-    private float yawTorque = 500f; // left and right
-    [SerializeField]
-    private float pitchTorque = 1000f; // up and down movement / pulling the nose of the ship up and down
+    //[SerializeField]
+    //private float yawTorque = 500f; // left and right
+    //[SerializeField]
+    //private float pitchTorque = 1000f; // up and down movement / pulling the nose of the ship up and down
     [SerializeField]
     private float rollTorque = 1000f; // just like barrel roll!
     [SerializeField]
@@ -20,7 +20,7 @@ public class ZeroGMovement : MonoBehaviour
     [SerializeField]
     private float strafeThrust = 50f; // how fast we go left and right
 
-    private Camera maincam;
+    private Camera mainCam;
 
     [Header("=== Boost Settings ===")]
     [SerializeField]
@@ -54,7 +54,7 @@ public class ZeroGMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maincam = Camera.main; // moving in relation to the camera
+        mainCam = Camera.main; // moving in relation to the camera
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
         currentBoostAmount = maxBoostAmount; // player starts with boost 
@@ -85,7 +85,8 @@ public class ZeroGMovement : MonoBehaviour
     }
     void HandleMovement()
     {
-        rb.AddRelativeTorque(Vector3.back * roll1D * rollTorque * Time.deltaTime);
+        //ROLL
+        rb.AddTorque(-mainCam.transform.forward * roll1D * rollTorque * Time.deltaTime);
         //rb.AddRelativeTorque(Vector3.right * Mathf.Clamp(-pitchYaw.y, -1f, 1f) * pitchTorque * Time.deltaTime);
         //rb.AddRelativeTorque(Vector3.up * Mathf.Clamp(pitchYaw.x, -1f, 1f) * yawTorque * Time.deltaTime);
 
@@ -103,12 +104,12 @@ public class ZeroGMovement : MonoBehaviour
                 currentThrust = thrust;
             }
 
-            rb.AddRelativeForce(Vector3.forward * thrust1D * currentThrust * Time.deltaTime);
+            rb.AddForce(mainCam.transform.forward * thrust1D * currentThrust * Time.deltaTime);
             glide = thrust;
         }
         else
         {
-            rb.AddRelativeForce(Vector3.forward * glide * Time.deltaTime);
+            rb.AddRelativeForce(mainCam.transform.forward * glide * Time.deltaTime);
             glide *= thrustGlideReduction;
         }
         // UP/DOWN
@@ -125,12 +126,12 @@ public class ZeroGMovement : MonoBehaviour
         //STARFING
         if (strafe1D > 0.1f || strafe1D < -0.1f)
         {
-            rb.AddRelativeForce(Vector3.right * strafe1D * upThrust * Time.deltaTime);
+            rb.AddForce(mainCam.transform.right * strafe1D * upThrust * Time.deltaTime);
             horizontalGlide = strafe1D * strafeThrust;
         }
         else
         {
-            rb.AddRelativeForce(Vector3.right * horizontalGlide * Time.deltaTime);
+            rb.AddForce(mainCam.transform.right * horizontalGlide * Time.deltaTime);
             horizontalGlide *= leftRightGlideReduction;
         }
     }
