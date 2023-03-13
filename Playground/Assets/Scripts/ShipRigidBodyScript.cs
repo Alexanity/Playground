@@ -50,6 +50,8 @@ public class ShipRigidBodyScript : MonoBehaviour
     private Vector2 pitchYaw;
     private bool isbrake;
 
+    private bool isOccupied = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -58,8 +60,12 @@ public class ShipRigidBodyScript : MonoBehaviour
 
     void FixedUpdate() // because we use physics and we want it to be independent from the frame rate
     {
-        HandleMovement();
-        HandleBoosting();
+        if (isOccupied)
+        {
+            HandleMovement();
+            HandleBoosting();
+        }
+        
     }
     void HandleBoosting()
     {
