@@ -54,6 +54,7 @@ public class ShipRigidBodyScript : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
         rb = GetComponent<Rigidbody>();
         currentBoostAmount = maxBoostAmount; // player starts with boost 
     }
