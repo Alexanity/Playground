@@ -50,7 +50,7 @@ public class ShipRigidBodyScript : MonoBehaviour
     private Vector2 pitchYaw;
     private bool isbrake;
 
-    private bool isOccupied = true;
+    private bool isOccupied = false;
 
     void Start()
     {
@@ -135,6 +135,14 @@ public class ShipRigidBodyScript : MonoBehaviour
             rb.AddRelativeForce(Vector3.right * horizontalGlide * Time.deltaTime);
             horizontalGlide *= leftRightGlideReduction;
         }
+    }
+    void PlayerEnteredShip()
+    {
+        rb.isKinematic = false;   
+    }
+    void PlayerExitedShip()
+    {
+        rb.isKinematic = true;
     }
 
     #region Input Methods
