@@ -123,6 +123,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &132673152
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 123
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.93311083
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.35958898
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 42.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024583, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_Name
+      value: Ship
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
 --- !u!1 &262889366
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +337,7 @@ GameObject:
   - component: {fileID: 449407085}
   - component: {fileID: 449407084}
   - component: {fileID: 449407083}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +420,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &475616992
 GameObject:
@@ -364,6 +433,7 @@ GameObject:
   - component: {fileID: 475616995}
   - component: {fileID: 475616994}
   - component: {fileID: 475616993}
+  - component: {fileID: 475616996}
   m_Layer: 0
   m_Name: Dome
   m_TagString: Untagged
@@ -379,7 +449,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475616992}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -434,13 +504,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475616992}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 100, y: 1001, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 57.212368, y: 57.21236, z: 57.21236}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &475616996
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475616992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1579241630799410176, guid: cfccd97e819801140a7709fe23729854, type: 3}
 --- !u!1 &763842511
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507927431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.79, z: 0}
+  m_LocalPosition: {x: -40.7, y: 0, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -621,7 +705,7 @@ Transform:
   - {fileID: 262889367}
   - {fileID: 1503026644}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &1507927433
 CharacterController:
@@ -656,9 +740,9 @@ MonoBehaviour:
   controller: {fileID: 1507927433}
   speed: 7
   gravity: -9.81
-  jumpHeight: 3
+  jumpHeight: 2
   groundCheck: {fileID: 1503026644}
-  groundDistance: 0.4
+  groundDistance: 0.5
   groundMask:
     serializedVersion: 2
     m_Bits: 64
@@ -675,7 +759,7 @@ GameObject:
   - component: {fileID: 1724983067}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
