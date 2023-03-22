@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.1
+      value: -351.5
       objectReference: {fileID: 0}
     - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -190,8 +190,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 2882847660851150390, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847660851150390, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847660851150390, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+--- !u!1 &132673153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2882847659562024583, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+  m_PrefabInstance: {fileID: 132673152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &132673154
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132673153}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d3cda08c90e2104b9277ed8044bfb33, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &262889366
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac2df51336617b4288aedf9b67aab93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 250
+  mouseSensitivity: 30
   playerBody: {fileID: 1507927432}
 --- !u!1 &449407082
 GameObject:
