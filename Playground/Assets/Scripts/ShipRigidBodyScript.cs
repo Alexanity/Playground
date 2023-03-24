@@ -50,7 +50,7 @@ public class ShipRigidBodyScript : MonoBehaviour
     private Vector2 pitchYaw;
     private bool isbrake;
 
-    private bool isOccupied = false;
+    private bool isOccupied = true;
 
     void Start()
     {
