@@ -1857,14 +1857,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763842511}
-  m_LocalRotation: {x: 0.63095206, y: 0.07194083, z: -0.4691259, w: 0.61371404}
+  m_LocalRotation: {x: 0.5526441, y: 0.3968182, z: -0.29058304, w: 0.67281604}
   m_LocalPosition: {x: 14, y: 20.64, z: -3.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 57.346, y: 291.01, z: 244.01999}
+  m_LocalEulerAnglesHint: {x: 76.975, y: 430.767, z: 372.188}
 --- !u!1 &795644222
 GameObject:
   m_ObjectHideFlags: 0
@@ -4412,51 +4412,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 5.110016, z: 23.843801}
   m_Center: {x: 0, y: 2.055008, z: 2.9741602}
---- !u!1 &1571126867
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1571126869}
-  - component: {fileID: 1571126868}
-  m_Layer: 0
-  m_Name: PortalToNextScene
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1571126868
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571126867}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2.8636386, z: 5.173014}
-  m_Center: {x: 0, y: 0.9318193, z: -0.7887466}
---- !u!4 &1571126869
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571126867}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 57.46, y: -2.441, z: -11.84}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1571238698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1621991540713508019, guid: c8134dd87be4906419f13922ddc5bf4f, type: 3}
