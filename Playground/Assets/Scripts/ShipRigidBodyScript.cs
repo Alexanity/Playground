@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class ShipRigidBodyScript : MonoBehaviour
@@ -31,6 +32,8 @@ public class ShipRigidBodyScript : MonoBehaviour
     private float boostMultipier = 5f;
     public bool boosting = false;
     public float currentBoostAmount;
+    [SerializeField]
+    private CinemachineVirtualCamera shipCam;
 
     [SerializeField, Range(0.001f, 0.999f)]
     private float thrustGlideReduction = 0.999f;   
@@ -56,7 +59,26 @@ public class ShipRigidBodyScript : MonoBehaviour
     {
         Cursor.visible = false;
         rb = GetComponent<Rigidbody>();
-        currentBoostAmount = maxBoostAmount; // player starts with boost 
+        currentBoostAmount = maxBoostAmount; // player starts with boost
+        
+    }
+    private void OnEnable()
+    {
+       if (shipCam != null)
+        {
+            CameraSwitcher.Register(shipCam);
+        }
+        else
+        {
+            Debug.LogError("Ship Camera Not Assigned");
+        } 
+    }
+    private void OnDisable()
+    {
+        if(shipCam != null)
+        {
+            CameraSwitcher.UnRegister(shipCam);
+        }
     }
 
     void FixedUpdate() // because we use physics and we want it to be independent from the frame rate

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class ZeroGMovement : MonoBehaviour
@@ -20,8 +21,11 @@ public class ZeroGMovement : MonoBehaviour
     [SerializeField]
     private float strafeThrust = 50f; // how fast we go left and right
 
-    private Camera mainCam;
+    [SerializeField]
+    private CinemachineVirtualCamera playerCam;
 
+    private Camera mainCam;
+    
     [Header("=== Boost Settings ===")]
     [SerializeField]
     private float maxBoostAmount = 2f;
@@ -51,19 +55,47 @@ public class ZeroGMovement : MonoBehaviour
     private float roll1D;
     private Vector2 pitchYaw;
     private bool isbrake;
-    // Start is called before the first frame update
+
+    public ShipRigidBodyScript ShipToEnter;
     void Start()
     {
-        //mainCam = Camera.main; // moving in relation to the camera
+        mainCam = Camera.main; // moving in relation to the camera
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
         currentBoostAmount = maxBoostAmount; // player starts with boost 
+        ShipToEnter = null; // making sure player can't enter the ship without being in the interaction zone
+        if(playerCam != null)
+        {
+            CameraSwitcher.Register(playerCam);
+        }
+        else
+        {
+            Debug.LogError("Player Camera Not Assigned");
+        }
+    }
+    private void OnDisable()
+    {
+        if (playerCam != null)
+        {
+            CameraSwitcher.UnRegister(playerCam);
+        }
     }
 
     void FixedUpdate() // because we use physics and we want it to be independent from the frame rate
     {
         HandleMovement();
         HandleBoosting();
+    }
+
+    void EnterShip()
+    {
+        transform.parent = ShipToEnter.transform;
+        this.gameObject.SetActive(false);
+    }
+    void ExitShip()
+    {
+        transform.parent = null;
+        this.gameObject.SetActive(true);
     }
     void HandleBoosting()
     {
@@ -85,6 +117,8 @@ public class ZeroGMovement : MonoBehaviour
     }
     void HandleMovement()
     {
+        rb.AddRelativeForce(-mainCam.transform.forward * roll1D * rollTorque * Time.deltaTime);
+
         // THRUST
         if (thrust1D > 0.1f || thrust1D < -0.1f)
         {
@@ -99,12 +133,12 @@ public class ZeroGMovement : MonoBehaviour
                 currentThrust = thrust;
             }
 
-            rb.AddForce(transform.forward * thrust1D * currentThrust * Time.deltaTime);
+            rb.AddForce(mainCam.transform.forward * thrust1D * currentThrust * Time.deltaTime);
             glide = thrust;
         }
         else
         {
-            rb.AddRelativeForce(transform.forward * glide * Time.deltaTime);
+            rb.AddRelativeForce(mainCam.transform.forward * glide * Time.deltaTime);
             glide *= thrustGlideReduction;
         }
         // UP/DOWN
@@ -121,12 +155,12 @@ public class ZeroGMovement : MonoBehaviour
         //STARFING
         if (strafe1D > 0.1f || strafe1D < -0.1f)
         {
-            rb.AddForce(transform.right * strafe1D * upThrust * Time.deltaTime);
+            rb.AddForce(mainCam.transform.right * strafe1D * upThrust * Time.deltaTime);
             horizontalGlide = strafe1D * strafeThrust;
         }
         else
         {
-            rb.AddForce(transform.right * horizontalGlide * Time.deltaTime);
+            rb.AddForce(mainCam.transform.right * horizontalGlide * Time.deltaTime);
             horizontalGlide *= leftRightGlideReduction;
         }
     }
@@ -155,5 +189,15 @@ public class ZeroGMovement : MonoBehaviour
     {
         boosting = context.performed;
     }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if(ShipToEnter!=null && context.action.triggered)
+        {
+            EnterShip();
+        }
+        
+    }
+
     #endregion
 }

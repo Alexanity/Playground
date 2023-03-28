@@ -13,6 +13,12 @@ public class ShipInteractionZone : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            player = other.gameObject.GetComponentInParent<ZeroGMovement> ();
+            if(player != null)
+            {
+                player.ShipToEnter = spaceship;
+            }
+
             print("Player is in the interaction zone");
         }
     }
@@ -20,6 +26,10 @@ public class ShipInteractionZone : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            if (player != null)
+            {
+                player.ShipToEnter = null;
+            }
             print("Player left interaction zone");
         }
     }
