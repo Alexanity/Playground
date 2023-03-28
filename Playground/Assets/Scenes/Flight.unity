@@ -5988,7 +5988,7 @@ Transform:
   m_Children:
   - {fileID: 984356411}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &249492654
 GameObject:
@@ -17885,7 +17885,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 45.326, y: -87.23, z: -180.602}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -22106,7 +22106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877881250558737657, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6877881250558737657, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22149,9 +22149,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6877881250558737658, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 1120085549}
+    - target: {fileID: 6877881250558737658, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: ShipToEnter
       value: 
       objectReference: {fileID: 2882847661014022167}
+    - target: {fileID: 6877881250558737659, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877881250558737659, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877881250558737659, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2136703050}
+    - target: {fileID: 6877881250558737659, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877881250558737659, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnInteract
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877881250558737659, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ZeroGMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877881250558737659, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6877881251056668998, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -27380,6 +27412,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119992277}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1120085549 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6877881250434950458, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+  m_PrefabInstance: {fileID: 890112069}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1124066717
 GameObject:
   m_ObjectHideFlags: 0
@@ -29378,7 +29421,7 @@ Transform:
   - {fileID: 5468675392905606617}
   - {fileID: 1924706367}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1207578023
 GameObject:
@@ -38955,7 +38998,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 51.787, y: -87.339, z: -180.684}
 --- !u!1 &1561352864
 GameObject:
@@ -44648,7 +44691,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1747534325
 GameObject:
@@ -55642,6 +55685,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133990878}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2136703050 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6877881250558737658, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+  m_PrefabInstance: {fileID: 890112069}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8147d25b781649b408bb7dc6dfda3ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2139705372
 GameObject:
   m_ObjectHideFlags: 0
@@ -56313,9 +56367,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024576, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024577, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: shipCam
+      value: 
+      objectReference: {fileID: 243027078}
     - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: m_LocalPosition.x

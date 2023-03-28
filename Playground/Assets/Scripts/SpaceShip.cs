@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 using Cinemachine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class ShipRigidBodyScript : MonoBehaviour
+public class SpaceShip : MonoBehaviour
 {
     [Header("=== Ship Movement Settings ===")]
     [SerializeField]
@@ -55,11 +55,17 @@ public class ShipRigidBodyScript : MonoBehaviour
 
     private bool isOccupied = true;
 
+    private ZeroGMovement player;
+
     void Start()
     {
         Cursor.visible = false;
         rb = GetComponent<Rigidbody>();
         currentBoostAmount = maxBoostAmount; // player starts with boost
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<ZeroGMovement>();
+        if(player != null){print("Player found");}
+        else{ print("Player NOT FOUND");}
+        player.onRequestShipEntry += PlayerEnteredShip;
         
     }
     private void OnEnable()
@@ -160,7 +166,9 @@ public class ShipRigidBodyScript : MonoBehaviour
     }
     void PlayerEnteredShip()
     {
-        rb.isKinematic = false;   
+        rb.isKinematic = false;
+        CameraSwitcher.SwitchCamera(shipCam);
+        isOccupied = true;
     }
     void PlayerExitedShip()
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipInteractionZone : MonoBehaviour
 {
     [SerializeField]
-    private ShipRigidBodyScript spaceship;
+    private SpaceShip spaceship;
 
     private ZeroGMovement player;
 

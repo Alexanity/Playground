@@ -25,7 +25,7 @@ public class ZeroGMovement : MonoBehaviour
     private CinemachineVirtualCamera playerCam;
 
     private Camera mainCam;
-    
+
     [Header("=== Boost Settings ===")]
     [SerializeField]
     private float maxBoostAmount = 2f;
@@ -56,7 +56,10 @@ public class ZeroGMovement : MonoBehaviour
     private Vector2 pitchYaw;
     private bool isbrake;
 
-    public ShipRigidBodyScript ShipToEnter;
+    public SpaceShip ShipToEnter;
+
+    public delegate void OnRequestShipEntry();
+    public event OnRequestShipEntry onRequestShipEntry;
     void Start()
     {
         mainCam = Camera.main; // moving in relation to the camera
@@ -91,6 +94,10 @@ public class ZeroGMovement : MonoBehaviour
     {
         transform.parent = ShipToEnter.transform;
         this.gameObject.SetActive(false);
+
+        if(onRequestShipEntry != null) { 
+            onRequestShipEntry(); 
+        }
     }
     void ExitShip()
     {
