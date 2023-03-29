@@ -22200,6 +22200,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6877881251951309774, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_Height
+      value: 2.506683
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877881251951309774, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_Radius
+      value: 0.8397389
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877881251951309774, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_Center.x
+      value: 0.12154878
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877881251951309774, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_Center.z
+      value: 0.048189905
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b12636e7a7964124d9cce76041977e08, type: 3}
 --- !u!1 &902931954
@@ -24221,7 +24237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damping: {x: 0.1, y: 0.5, z: 0.3}
+  Damping: {x: 0.1, y: 0.5, z: 0.4}
   ShoulderOffset: {x: 0, y: -0.4, z: 0}
   VerticalArmLength: 0.4
   CameraSide: 1
@@ -44583,7 +44599,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 1
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -56500,7 +56516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882847660710238302, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: m_Size.x
-      value: 1.3484912
+      value: 1.3366354
       objectReference: {fileID: 0}
     - target: {fileID: 2882847660710238302, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: m_Size.y
@@ -56508,7 +56524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882847660710238302, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: m_Center.x
-      value: -0.02816248
+      value: -0.022234589
       objectReference: {fileID: 0}
     - target: {fileID: 2882847660710238302, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: m_Center.y
