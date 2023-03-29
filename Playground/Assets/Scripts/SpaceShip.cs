@@ -63,10 +63,11 @@ public class SpaceShip : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         currentBoostAmount = maxBoostAmount; // player starts with boost
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<ZeroGMovement>();
-        if(player != null){print("Player found");}
-        else{ print("Player NOT FOUND");}
-        player.onRequestShipEntry += PlayerEnteredShip;
         
+        if (player != null) { print("Player found"); }
+
+        player.onRequestShipEntry += PlayerEnteredShip; // assinging the function onRequestEntry to the PlayerEnteredShip method
+
     }
     private void OnEnable()
     {

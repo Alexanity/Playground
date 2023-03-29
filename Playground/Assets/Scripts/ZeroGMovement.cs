@@ -96,7 +96,7 @@ public class ZeroGMovement : MonoBehaviour
         this.gameObject.SetActive(false);
 
         if(onRequestShipEntry != null) { 
-            onRequestShipEntry(); 
+            onRequestShipEntry();
         }
     }
     void ExitShip()

@@ -5952,7 +5952,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 22
+  m_Priority: 9
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 1983175163}
   m_Follow: {fileID: 1983175163}
@@ -44675,8 +44675,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743349649}
-  m_LocalRotation: {x: 0.065403156, y: 0, z: 0, w: 0.99785894}
-  m_LocalPosition: {x: 0, y: 2.2576303, z: -3.7406793}
+  m_LocalRotation: {x: 0, y: -0.6185777, z: 0, w: 0.7857236}
+  m_LocalPosition: {x: 4.3240094, y: -0.178, z: 3.83352}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56387,7 +56387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882847659562024576, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2882847659562024577, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: shipCam
@@ -56443,7 +56443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2882847659562024583, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8497203791680660149, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: spaceship
