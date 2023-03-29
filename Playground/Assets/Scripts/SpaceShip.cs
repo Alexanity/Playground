@@ -57,6 +57,9 @@ public class SpaceShip : MonoBehaviour
 
     private ZeroGMovement player;
 
+    public delegate void OnRequestShipExit();
+    public event OnRequestShipExit onRequestShipExit;
+
     void Start()
     {
         Cursor.visible = false;
@@ -174,6 +177,9 @@ public class SpaceShip : MonoBehaviour
     void PlayerExitedShip()
     {
         rb.isKinematic = true;
+        isOccupied = false;
+        if (onRequestShipExit != null) { onRequestShipExit(); }
+
     }
 
     #region Input Methods
@@ -200,6 +206,13 @@ public class SpaceShip : MonoBehaviour
     public void OnBoost(InputAction.CallbackContext context)
     {
         boosting = context.performed;
+    }
+    public void onInteract(InputAction.CallbackContext context)
+    {
+        if (isOccupied && context.action.triggered)
+        {
+            PlayerExitedShip();
+        }
     }
     #endregion
 }

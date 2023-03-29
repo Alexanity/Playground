@@ -22094,7 +22094,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6877881250434950459, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00000016763806
+      value: -0.003999453
       objectReference: {fileID: 0}
     - target: {fileID: 6877881250434950459, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22102,11 +22102,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877881250434950459, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.28799948
+      value: -1.0140002
       objectReference: {fileID: 0}
     - target: {fileID: 6877881250558737541, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877881250558737656, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877881250558737656, guid: b12636e7a7964124d9cce76041977e08, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.014
       objectReference: {fileID: 0}
     - target: {fileID: 6877881250558737657, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: m_RootOrder
@@ -22114,15 +22122,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877881250558737657, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.38
+      value: 1.909
       objectReference: {fileID: 0}
     - target: {fileID: 6877881250558737657, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.34
+      value: 0.224
       objectReference: {fileID: 0}
     - target: {fileID: 6877881250558737657, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.82
+      value: 5.484
       objectReference: {fileID: 0}
     - target: {fileID: 6877881250558737657, guid: b12636e7a7964124d9cce76041977e08, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27925,6 +27933,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134043341}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1138560111 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2882847659562024583, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+  m_PrefabInstance: {fileID: 2882847661014022166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1138704867
 GameObject:
   m_ObjectHideFlags: 0
@@ -44676,7 +44689,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743349649}
   m_LocalRotation: {x: 0, y: -0.6185777, z: 0, w: 0.7857236}
-  m_LocalPosition: {x: 4.3240094, y: -0.178, z: 3.83352}
+  m_LocalPosition: {x: 2.1059465, y: 0.386, z: 5.435621}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56386,13 +56399,41 @@ PrefabInstance:
       value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 2882847659562024576, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024576, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024577, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: thrust
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 2882847659562024577, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: shipCam
       value: 
       objectReference: {fileID: 243027078}
+    - target: {fileID: 2882847659562024577, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: upThrust
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024577, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: yawTorque
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024577, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: rollTorque
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024577, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: pitchTorque
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659562024577, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: strafeThrust
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 2882847659562024580, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -56445,6 +56486,50 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 2882847659583551312, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_Height
+      value: 2.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659583551312, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_Radius
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847659583551315, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847660710238302, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3484912
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847660710238302, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_Size.y
+      value: 0.42676857
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847660710238302, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_Center.x
+      value: -0.02816248
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847660710238302, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_Center.y
+      value: 0.056585893
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847660710238303, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6575262
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847660710238303, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_Size.z
+      value: 1.4877114
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847660710238303, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_Center.y
+      value: -0.028487116
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882847660710238303, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
+      propertyPath: m_Center.z
+      value: -0.47018695
+      objectReference: {fileID: 0}
     - target: {fileID: 8497203791680660149, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
       propertyPath: spaceship
       value: 
@@ -56456,12 +56541,182 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2882847659562024577, guid: 667d5d6cbcb787c47a5f25c7ea428ce9, type: 3}
   m_PrefabInstance: {fileID: 2882847661014022166}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1138560111}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f38af184ef29be44b57667d477e0e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2882847661014022170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138560111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 3b33a57c7d32d8d4cb8694796a442310, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2882847661014022167}
+        m_TargetAssemblyTypeName: SpaceShip, Assembly-CSharp
+        m_MethodName: OnThrust
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fd03bb4c-bb7b-4c23-9fae-0edb83b4212e
+    m_ActionName: Ship Controls/Thrust[/Keyboard/s,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2882847661014022167}
+        m_TargetAssemblyTypeName: SpaceShip, Assembly-CSharp
+        m_MethodName: OnStrafe
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 099f8ff5-933b-485f-8c2b-f4c62cc6b027
+    m_ActionName: Ship Controls/Strafe[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2882847661014022167}
+        m_TargetAssemblyTypeName: SpaceShip, Assembly-CSharp
+        m_MethodName: OnUpDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e11f86cc-d5f5-4779-babf-296d7a638f9d
+    m_ActionName: Ship Controls/UpDown[/Keyboard/ctrl,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2882847661014022167}
+        m_TargetAssemblyTypeName: SpaceShip, Assembly-CSharp
+        m_MethodName: OnRoll
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0dce7e8f-b0f5-4a6e-ba58-c6f46e3d3b56
+    m_ActionName: Ship Controls/Roll[/Keyboard/q,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2882847661014022167}
+        m_TargetAssemblyTypeName: SpaceShip, Assembly-CSharp
+        m_MethodName: OnPitchYaw
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b7e09696-6a14-4896-a8a9-80d7af5e5d5d
+    m_ActionName: Ship Controls/PitchYaw[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2882847661014022167}
+        m_TargetAssemblyTypeName: SpaceShip, Assembly-CSharp
+        m_MethodName: OnBoost
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 35ef0835-e9fb-40e4-9fb0-f7d63f6ba0d0
+    m_ActionName: Ship Controls/Boost[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2882847661014022167}
+        m_TargetAssemblyTypeName: SpaceShip, Assembly-CSharp
+        m_MethodName: onInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bd5f64a0-c4f5-4f01-98c6-dfea2ce6b504
+    m_ActionName: Ship Controls/Interact[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 07578cb4-d709-40fa-96bc-f0e057358e67
+    m_ActionName: PlayerControlls/Thrust[/Keyboard/s,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a44aab2-01a6-43f5-9dd1-53df4f334282
+    m_ActionName: PlayerControlls/Strafe[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 38ded742-4d09-4105-9559-063ed2db6e9b
+    m_ActionName: PlayerControlls/UpDown[/Keyboard/ctrl,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8b57aec3-9334-4481-8eda-71fa72fa8812
+    m_ActionName: PlayerControlls/Roll[/Keyboard/q,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cf1f62d0-3902-4a1d-aa78-f3270c3df3c4
+    m_ActionName: PlayerControlls/LookMovement[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: abb96a08-ca58-4ec2-90b1-b004bc83d0a3
+    m_ActionName: PlayerControlls/Boost[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9cb43fd9-8627-4ca1-a1a6-ad102e049b2e
+    m_ActionName: PlayerControlls/Interact[/Keyboard/f]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Ship Controls
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!4 &3691364446493769058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8813926679240214808, guid: 57b20d80d38e727419894ebdca05ee6e, type: 3}

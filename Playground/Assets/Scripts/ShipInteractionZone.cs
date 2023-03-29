@@ -16,7 +16,7 @@ public class ShipInteractionZone : MonoBehaviour
             player = other.gameObject.GetComponentInParent<ZeroGMovement> ();
             if(player != null)
             {
-                player.ShipToEnter = spaceship;
+                player.AssignShip(spaceship);
             }
 
             print("Player is in the interaction zone");
@@ -28,7 +28,7 @@ public class ShipInteractionZone : MonoBehaviour
         {
             if (player != null)
             {
-                player.ShipToEnter = null;
+                player.RemoveShip();
             }
             print("Player left interaction zone");
         }

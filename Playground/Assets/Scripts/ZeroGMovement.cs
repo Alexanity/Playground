@@ -93,7 +93,7 @@ public class ZeroGMovement : MonoBehaviour
     void EnterShip()
     {
         transform.parent = ShipToEnter.transform;
-        this.gameObject.SetActive(false);
+        this.gameObject.SetActive(false); // hides player
 
         if(onRequestShipEntry != null) { 
             onRequestShipEntry();
@@ -102,8 +102,20 @@ public class ZeroGMovement : MonoBehaviour
     void ExitShip()
     {
         transform.parent = null;
-        this.gameObject.SetActive(true);
+        this.gameObject.SetActive(true); // shows the player again
+        CameraSwitcher.SwitchCamera(playerCam);
     }
+    public void AssignShip(SpaceShip ship)
+    {
+        ShipToEnter = ship;
+        if(ShipToEnter != null) { ShipToEnter.onRequestShipExit += ExitShip; } // += subscribe the method
+    }
+    public void RemoveShip()
+    {
+        ShipToEnter.onRequestShipExit -= ExitShip; // unsubscribe the method
+        ShipToEnter = null;
+    }
+
     void HandleBoosting()
     {
         if (boosting && currentBoostAmount > 0f)
