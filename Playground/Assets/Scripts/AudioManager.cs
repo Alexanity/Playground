@@ -36,5 +36,10 @@ public class AudioManager : MonoBehaviour
         if (s != null)
             return;
         s.source.Play();
+
+        if(PauseMenu.GameIsPaused)
+        {
+            s.source.pitch *= 5;
+        }
     }
 }

@@ -207,7 +207,7 @@ public class ZeroGMovement : MonoBehaviour
     public void OnBoost(InputAction.CallbackContext context)
     {
         boosting = context.performed;
-        FindObjectOfType<AudioManager>().Play("Flight");
+        //FindObjectOfType<AudioManager>().Play("boost");
     }
 
     public void OnInteract(InputAction.CallbackContext context)
