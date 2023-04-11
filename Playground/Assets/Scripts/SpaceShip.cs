@@ -186,6 +186,7 @@ public class SpaceShip : MonoBehaviour
     public void OnThrust(InputAction.CallbackContext context) // context = the button -> so when you press the button it reads the value
     {                                          // Works with both keyboard and controllers
         thrust1D = context.ReadValue<float>(); // if we press W the value will be set to 1, if we press S the value will be set to -1
+        FindObjectOfType<AudioManager>().Play("Flight");
     }
     public void OnStrafe(InputAction.CallbackContext context)
     {
