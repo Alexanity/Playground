@@ -7,6 +7,10 @@ using Cinemachine;
 [RequireComponent(typeof(Rigidbody))]
 public class SpaceShip : MonoBehaviour
 {
+    [Header("=== Ship health ===")]
+    public int maxHealth = 100;
+    public int currentHealth;
+
     [Header("=== Ship Movement Settings ===")]
     [SerializeField]
     private float yawTorque = 500f; // left and right
@@ -64,6 +68,7 @@ public class SpaceShip : MonoBehaviour
     {
         Cursor.visible = false;
         rb = GetComponent<Rigidbody>();
+        currentHealth = maxHealth; // set health to max
         currentBoostAmount = maxBoostAmount; // player starts with boost
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<ZeroGMovement>();
         
@@ -99,6 +104,17 @@ public class SpaceShip : MonoBehaviour
             HandleBoosting();
         }
         
+    }
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.gameObject.CompareTag("Asteroids"))
+        {
+            TakeDamage(20);
+        }
     }
     void HandleBoosting()
     {

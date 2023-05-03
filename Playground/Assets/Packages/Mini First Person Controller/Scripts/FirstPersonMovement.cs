@@ -4,8 +4,8 @@ using UnityEngine;
 public class FirstPersonMovement : MonoBehaviour
 {
     public float speed = 5;
-    public int maxHealth = 100;
     public int currentHealth;
+    public int maxHealth = 100;
     public HealthScript healthBar;
 
     [Header("Running")]
@@ -24,10 +24,10 @@ public class FirstPersonMovement : MonoBehaviour
     }
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    TakeDamage(20);
-        //}
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            TakeDamage(20);
+        }
     }
     void TakeDamage(int damage)
     {
