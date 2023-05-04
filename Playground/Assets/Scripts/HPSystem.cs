@@ -15,15 +15,19 @@ public class HPSystem : MonoBehaviour
     bool hasCollided = false;
     [Header("=== Respawn ===")]
     public Transform respawnPoint;
-    [Header("=== Sound ===")]
-    public AudioClip explosionSound;
-    private AudioSource audioSource;
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
+    //[Header("=== Sound ===")]
+    //public AudioClip explosionSound;
+    //private AudioSource audioSource;
 
     private void Start()
     {
         currentHealth = maxHealth;
         collisionParticle.Pause();
-        audioSource = GetComponent<AudioSource>();
+        originalPosition = transform.position;
+        originalRotation = transform.rotation;
+        //audioSource = GetComponent<AudioSource>();
     }
     void TakeDamage(int damage)
     {
@@ -40,17 +44,19 @@ public class HPSystem : MonoBehaviour
             TakeDamage(20);
             ParticleSystem explosion = Instantiate(collisionParticle, transform.position, Quaternion.identity);
             collisionParticle.Play();
-            if(explosion != null)
-            {
-                audioSource.PlayOneShot(explosionSound);
-            }
+            //if(explosion != null)
+            //{
+            //    audioSource.PlayOneShot(explosionSound);
+            //}
             
-            FindObjectOfType<AudioManager>().Play("Explosion");
+            //FindObjectOfType<AudioManager>().Play("Explosion");
         }
     }
     void Respawn()
     {
-        transform.position = respawnPoint.position;
+        transform.position = originalPosition;
+        transform.rotation = originalRotation;
+
         currentHealth = maxHealth;
     }
 }
