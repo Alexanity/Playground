@@ -44,12 +44,7 @@ public class HPSystem : MonoBehaviour
             TakeDamage(20);
             ParticleSystem explosion = Instantiate(collisionParticle, transform.position, Quaternion.identity);
             collisionParticle.Play();
-            //if(explosion != null)
-            //{
-            //    audioSource.PlayOneShot(explosionSound);
-            //}
-            
-            //FindObjectOfType<AudioManager>().Play("Explosion");
+            FindObjectOfType<AudioManager>().Play("explosion");
         }
     }
     void Respawn()
@@ -59,4 +54,10 @@ public class HPSystem : MonoBehaviour
 
         currentHealth = maxHealth;
     }
+    //void PlaySound()
+    //{
+    //  audioSource.PlayOneShot(explosionSound);
+    //  Debug.Log("isPLaying");
+    //  FindObjectOfType<AudioManager>().Play("Explosion");
+    //}
 }
