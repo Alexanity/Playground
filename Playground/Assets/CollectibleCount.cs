@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class CollectibleCount : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //TMPro.TextMeshPro text;
+    //int count;
+    //private void Awake()
+    //{
+    //    text = GetComponent<TMPro.TextMeshPro>();
+    //}
+    //void Start() => UpdateCount();
+    //void OnEnable() => Collectible.onCollected += OnCollectibleCollected;
+    //void OnDisable() => Collectible.onCollected -= OnCollectibleCollected;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //void OnCollectibleCollected()
+    //{
+    //    count++;
+    //    UpdateCount();
+    //} 
+    //void UpdateCount()
+    //{
+    //    text.text = $"{count}/{Collectible.total}";
+    //}
 }
