@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HPSystem : MonoBehaviour
@@ -17,9 +18,10 @@ public class HPSystem : MonoBehaviour
     public Transform respawnPoint;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
-    //[Header("=== Sound ===")]
-    //public AudioClip explosionSound;
-    //private AudioSource audioSource;
+    private int numRespawns = 0;
+    [Header("=== Sound ===")]
+    public AudioClip explosionSound;
+    private AudioSource audioSource;
 
     private void Start()
     {
@@ -41,16 +43,27 @@ public class HPSystem : MonoBehaviour
         if (collision.collider.gameObject.CompareTag("Asteroids"))
         {
             TakeDamage(20);
-            ParticleSystem explosion = Instantiate(collisionParticle, transform.position, Quaternion.identity);
-            collisionParticle.Play();
-            FindObjectOfType<AudioManager>().Play("explosion");
+            if (collisionParticle != null)
+            {
+                ParticleSystem explosion = Instantiate(collisionParticle, transform.position, Quaternion.identity);
+                collisionParticle.Play();
+                FindObjectOfType<AudioManager>().Play("explosion");
+            }
+            
         }
     }
     void Respawn()
     {
-        transform.position = originalPosition;
-        transform.rotation = originalRotation;
-
-        currentHealth = maxHealth;
+        numRespawns++;
+        if (numRespawns >= 3)
+        {
+            SceneManager.LoadScene("PlayerDied");
+        }
+        else
+        {
+            transform.position = originalPosition;
+            transform.rotation = originalRotation;
+            currentHealth = maxHealth;
+        }
     }
 }
