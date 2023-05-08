@@ -27,7 +27,6 @@ public class HPSystem : MonoBehaviour
         collisionParticle.Pause();
         originalPosition = transform.position;
         originalRotation = transform.rotation;
-        //audioSource = GetComponent<AudioSource>();
     }
     void TakeDamage(int damage)
     {
@@ -54,10 +53,4 @@ public class HPSystem : MonoBehaviour
 
         currentHealth = maxHealth;
     }
-    //void PlaySound()
-    //{
-    //  audioSource.PlayOneShot(explosionSound);
-    //  Debug.Log("isPLaying");
-    //  FindObjectOfType<AudioManager>().Play("Explosion");
-    //}
 }
