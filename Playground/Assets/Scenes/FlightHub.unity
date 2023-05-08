@@ -3740,6 +3740,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
 --- !u!1 &192662610
@@ -5680,6 +5684,10 @@ PrefabInstance:
     - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
       propertyPath: m_Name
       value: Collectable (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
+      propertyPath: m_TagString
+      value: Coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
@@ -10080,6 +10088,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
 --- !u!1 &417256166
@@ -11461,6 +11473,10 @@ PrefabInstance:
     - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
       propertyPath: m_Name
       value: Collectable (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
+      propertyPath: m_TagString
+      value: Coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
@@ -17596,6 +17612,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
 --- !u!1 &772560377
@@ -17992,6 +18012,10 @@ PrefabInstance:
     - target: {fileID: 1247311384876784, guid: 4adffb0018aeda44e9263f901167af1f, type: 3}
       propertyPath: m_Name
       value: CollectibleSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247311384876784, guid: 4adffb0018aeda44e9263f901167af1f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4782282035096714, guid: 4adffb0018aeda44e9263f901167af1f, type: 3}
       propertyPath: m_RootOrder
@@ -21374,6 +21398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
 --- !u!1 &942071590
@@ -21987,6 +22015,10 @@ PrefabInstance:
     - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
       propertyPath: m_Name
       value: Collectable (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
+      propertyPath: m_TagString
+      value: Coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
@@ -41694,6 +41726,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
 --- !u!1 &1779631428
@@ -46575,6 +46611,10 @@ PrefabInstance:
     - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
       propertyPath: m_Name
       value: Collectable (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
+      propertyPath: m_TagString
+      value: Coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
@@ -51918,6 +51958,10 @@ PrefabInstance:
     - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
       propertyPath: m_Name
       value: Collectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674197998914625720, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}
+      propertyPath: m_TagString
+      value: Coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f30d51e711abf4cb9bc4f9bcca2129, type: 3}

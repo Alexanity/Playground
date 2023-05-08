@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Collectible : MonoBehaviour
 {
@@ -10,8 +11,16 @@ public class Collectible : MonoBehaviour
     public ParticleSystem particleSystemPrefab;
     public AudioClip audioClip;
     private bool hasPlayed = false;
+    private static int coinsCollected = 0;
+    private int totalCoins;
 
-    void Awake() => total++;
+    void Awake()
+    {
+        total++;
+        totalCoins = GameObject.FindGameObjectsWithTag("Coin").Length;
+        Debug.Log($"Number of coins:{totalCoins}");
+        Debug.Log($"Coins collected at start: {coinsCollected}");
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,6 +28,8 @@ public class Collectible : MonoBehaviour
         {
             Debug.Log("Collided");
             onCollected?.Invoke();
+            coinsCollected++;
+
             if (particleSystemPrefab != null)
             {
                 ParticleSystem ps = Instantiate(particleSystemPrefab, transform.position, Quaternion.identity);
@@ -30,6 +41,11 @@ public class Collectible : MonoBehaviour
                 hasPlayed = true;
             }
             Destroy(gameObject);
+            Debug.Log($"Coins collected: {coinsCollected}");
+            if (coinsCollected == totalCoins)
+            {
+                SceneManager.LoadScene("EndGame");
+            }
         }
     }
 }
