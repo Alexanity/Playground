@@ -11,7 +11,7 @@ public class Collectible : MonoBehaviour
     public ParticleSystem particleSystemPrefab;
     public AudioClip audioClip;
     private bool hasPlayed = false;
-    private static int coinsCollected = 0;
+    private static int stellaronsCollected = 0;
     private int totalCoins;
 
     void Awake()
@@ -19,7 +19,7 @@ public class Collectible : MonoBehaviour
         total++;
         totalCoins = GameObject.FindGameObjectsWithTag("Coin").Length;
         Debug.Log($"Number of coins:{totalCoins}");
-        Debug.Log($"Coins collected at start: {coinsCollected}");
+        Debug.Log($"Coins collected at start: {stellaronsCollected}");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,7 +28,7 @@ public class Collectible : MonoBehaviour
         {
             Debug.Log("Collided");
             onCollected?.Invoke();
-            coinsCollected++;
+            stellaronsCollected++;
 
             if (particleSystemPrefab != null)
             {
@@ -41,8 +41,8 @@ public class Collectible : MonoBehaviour
                 hasPlayed = true;
             }
             Destroy(gameObject);
-            Debug.Log($"Coins collected: {coinsCollected}");
-            if (coinsCollected == totalCoins)
+            Debug.Log($"Stellarons collected: {stellaronsCollected}");
+            if (stellaronsCollected == totalCoins)
             {
                 SceneManager.LoadScene("EndGame");
             }
