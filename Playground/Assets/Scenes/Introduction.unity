@@ -2217,9 +2217,9 @@ MonoBehaviour:
   lines:
   - 'You''ve found youself lost in space and you must get back home. '
   - 
-  - 'To get home you must collect all 20 Stellarons. '
+  - 'To get home you must collect all 20 Shdabloons. '
   - 
-  - Go trough the portal and finish your quest!
+  - Go through the portal and finish your quest!
   textSpeed: 0.1
 --- !u!1 &1645989237
 GameObject:
